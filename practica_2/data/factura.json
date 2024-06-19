@@ -37,130 +37,106 @@
         "fecha": "1999-10-10",
         "monto": 100,
         "tipoRUC": "EDUCATIVO",
-        "RUC": "1234567890"
+        "RUC": "55556565665555"
     },
     {
         "id": 6,
-        "usuario": "Eberson Guachizaca",
+        "usuario": "Eberson Guayllas",
         "fecha": "2012-08-08",
         "monto": 200,
         "tipoRUC": "EDUCATIVO",
-        "RUC": "1105526436"
+        "RUC": "55556565665555"
     },
     {
         "id": 7,
-        "usuario": "Santos Jesus",
-        "fecha": "2005-02-28",
+        "usuario": "Santiago Tamayo",
+        "fecha": "2002-08-19",
         "monto": 200,
         "tipoRUC": "PROFESIONAL",
-        "RUC": "1105526436"
+        "RUC": "155556565665555"
     },
     {
         "id": 8,
-        "usuario": "Sara Coronel",
-        "fecha": "2017-02-28",
+        "usuario": "Pepito de los palotes",
+        "fecha": "2019-02-02",
         "monto": 200,
         "tipoRUC": "PROFESIONAL",
-        "RUC": "1105526436"
+        "RUC": "177777777777777"
     },
     {
         "id": 9,
         "usuario": "Jose Guaman",
-        "fecha": "2003-02-28",
+        "fecha": "2013-12-12",
         "monto": 200,
         "tipoRUC": "PROFESIONAL",
-        "RUC": "1105526436"
+        "RUC": "177777777777777"
     },
     {
         "id": 10,
         "usuario": "Bradley Poma",
-        "fecha": "2008-10-10",
+        "fecha": "2024-06-18",
         "monto": 100,
         "tipoRUC": "EDUCATIVO",
-        "RUC": "1234567890001"
+        "RUC": "177777777777777"
     },
     {
         "id": 11,
-        "usuario": "Carlos Gutierrez",
-        "fecha": "2023-01-15",
+        "usuario": "David Guaman",
+        "fecha": "2020-01-23",
         "monto": 450.75,
         "tipoRUC": "EDUCATIVO",
-        "RUC": "1234567891"
+        "RUC": "177777777777777"
     },
     {
         "id": 12,
-        "usuario": "Mariana Lopez",
-        "fecha": "2022-06-25",
+        "usuario": "Sandro Montaño",
+        "fecha": "1998-06-14",
         "monto": 780.5,
         "tipoRUC": "PROFESIONAL",
-        "RUC": "0987654321"
+        "RUC": "88888888888888"
     },
     {
         "id": 13,
-        "usuario": "Gabriel Torres",
-        "fecha": "2023-03-30",
+        "usuario": "Andrea Moreno",
+        "fecha": "2000-12-30",
         "monto": 620.4,
         "tipoRUC": "EDUCATIVO",
-        "RUC": "1234567892"
+        "RUC": "88888888888888"
     },
     {
         "id": 14,
-        "usuario": "Lucia Perez",
-        "fecha": "2022-09-19",
+        "usuario": "Pablo Montaño",
+        "fecha": "1999-09-19",
         "monto": 910.8,
         "tipoRUC": "PROFESIONAL",
-        "RUC": "1122334455"
+        "RUC": "88888888888888"
     },
     {
         "id": 15,
-        "usuario": "Roberto Gomez",
-        "fecha": "2021-12-02",
+        "usuario": "Erika Alvarez",
+        "fecha": "2001-11-22",
         "monto": 300.6,
         "tipoRUC": "EDUCATIVO",
-        "RUC": "9988776655"
+        "RUC": "88888888888888"
     },
     {
         "id": 16,
-        "usuario": "Ana Salazar",
-        "fecha": "2023-05-20",
+        "usuario": "Isabel Morocho",
+        "fecha": "2024-01-01",
         "monto": 560.95,
         "tipoRUC": "PROFESIONAL",
-        "RUC": "7766554433"
+        "RUC": "88888888888888"
     },
     {
         "id": 17,
-        "usuario": "David Herrera",
-        "fecha": "2022-11-18",
+        "usuario": "Mario Zambrano",
+        "fecha": "2012-12-12",
         "monto": 430.25,
         "tipoRUC": "EDUCATIVO",
-        "RUC": "4455667788"
+        "RUC": "90129131243934"
     },
     {
         "id": 18,
-        "usuario": "Paula Fernandez",
-        "fecha": "2023-02-05",
-        "monto": 240.35,
-        "tipoRUC": "PROFESIONAL",
-        "RUC": "5566778899"
-    },
-    {
-        "id": 19,
-        "usuario": "Juan Castillo",
-        "fecha": "2021-07-22",
-        "monto": 720.9,
-        "tipoRUC": "EDUCATIVO",
-        "RUC": "3344556677"
-    },
-    {
-        "id": 20,
-        "usuario": "Isabel Vega",
-        "fecha": "2023-04-10",
-        "monto": 850.15,
-        "tipoRUC": "PROFESIONAL",
-        "RUC": "6677889900"
-    },
-    {
-        "id": 1,
         "usuario": "Kerly Huachaca",
         "fecha": "2024-06-15",
         "monto": 1200.5,
