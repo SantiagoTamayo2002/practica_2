@@ -3,9 +3,9 @@ sys.path.append('../')
 
 from random import randint
 from time import time
-from controls.tda.linked.order.quickSort import QuickSort
-from controls.tda.linked.order.shellSort import ShellSort
-from controls.tda.linked.order.mergeSort import MergeSort
+from controls.tda.linked.ordenar.quickSort import QuickSort
+from controls.tda.linked.ordenar.shellSort import ShellSort
+from controls.tda.linked.ordenar.mergeSort import MergeSort
 
 quicksort = QuickSort()
 shell = ShellSort()

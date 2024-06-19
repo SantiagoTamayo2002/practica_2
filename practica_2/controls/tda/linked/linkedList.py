@@ -2,11 +2,11 @@ from controls.tda.linked.node import Node
 from controls.exception.linkedListExeption import LinkedEmptyException
 from controls.exception.arrayPositionException import ArrayPositionException
 from numbers import Number
-from controls.tda.linked.order.quickSort import QuickSort
-from controls.tda.linked.order.mergeSort import MergeSort
-from controls.tda.linked.search.binary import Binary
-from controls.tda.linked.order.shellSort import ShellSort
-from controls.tda.linked.search.binarySecuencial import BinarySecuencial
+from controls.tda.linked.ordenar.quickSort import QuickSort
+from controls.tda.linked.ordenar.mergeSort import MergeSort
+from controls.tda.linked.buscar.binary import Binary
+from controls.tda.linked.ordenar.shellSort import ShellSort
+from controls.tda.linked.buscar.binarySecuencial import BinarySecuencial
 
 
 class Linked_List(object):
