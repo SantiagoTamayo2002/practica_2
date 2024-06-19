@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Practica #2</title>
+
+        <!-- CSS FILES -->                
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,400;0,600;0,700;1,200;1,700&display=swap" rel="stylesheet">
+            
+        <link href="{{ url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+
+        <link href="{{ url_for('static', filename='css/bootstrap-icons.css')}}" rel="stylesheet">
+
+        <link href="{{ url_for('static', filename='css/vegas.min.css')}}" rel="stylesheet">
+
+        <link href="{{ url_for('static', filename='css/tooplate-barista.css')}}" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        
+    </head>
+    
+    <body class="" style="background-image: url(../static/images/imagenParaFondo.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; background-attachment: fixed; position: relative;">
+            <main>
+                <nav class="navbar navbar-expand-lg" style ="background-color: black; border-radius: 5px;">                
+                    <div class="container" style ="background-color: rgb(51, 44, 44); margin-left: 0%; width: 100%; ">
+                        <a class="navbar-brand d-flex align-items-center color-black " href="{{ url_for('api.home') }} " >
+                            Santiago Tamayo 
+                        </a>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ms-lg-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ url_for('api.ver_facturas') }}">Facturas</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ url_for('api.lista_historial') }}">Historial de Retenciones</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ url_for('api.buscar_factura') }}">Búsqueda</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <section class="booking-section section-padding" style="max-width: 100%;">
+                    <div class="booking-form-wrap" style="background-color: black; width: 96%; margin-left: 2%;">
+                        <div class="row" style="width: 100%;">
+                                    
+                            {% block content %}
+
+
+                            {% endblock %}  
+
+                        </div>
+                    </div>
+                </section> 
+            </main>
+
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+        <script src="{{ url_for('static', filename='js/jquery.sticky.js')}}"></script>
+        <script src="{{ url_for('static', filename='js/vegas.min.js')}}"></script>
+        <script src="{{ url_for('static', filename='js/custom.js')}}"></script>
+    </body>
+</html>

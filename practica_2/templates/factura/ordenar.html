@@ -1,0 +1,74 @@
+{% extends "template.html" %}
+{% block content %}
+
+
+<div style="display: flex; margin-left: 1%;" class="contenedor">
+    <div class="casilla_2" style="flex: 1; width: 30%; align-items: start; justify-content: center; display: grid; margin-top: 50px;">
+        <div class="row" style="background-color: rgb(51, 44, 44); margin-top: 40px; margin-left: 20px; border-radius: 15px; padding: 5px; height: 450px; width: 90%;">
+            <div class="d-grid gap-2 mx-auto">
+                        <form id="ordenar-form" method="get" action="/historial/ordenar">
+                            <div class="row">
+                                <h3 class="text-white m-3" style="text-align: center; border-bottom: 10px;">Parámetros de ordenación</h3>
+                                <div class="col">
+                                    <select name="campo" class="form-select" aria-label="Opciones de ordenamiento">
+                                        <option value="_usuario">Nombre de usuario</option>
+                                        <option value="_fecha">Fecha de factura</option>
+                                        <option value="_monto">Total</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <select name="direccion" class="form-select" aria-label="Opciones de ordenamiento">
+                                        <option value="1">Ascendente</option>
+                                        <option value="2">Descendente</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <select name="algoritmo" class="form-select" aria-label="Opciones de algoritmo">
+                                        <option value="1">QuickSort</option>
+                                        <option value="2">MergeSort</option>
+                                        <option value="0">ShellSort</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button class="btn btn-warning mt-2" style="width: 100%;" type="submit">ORDENAR</button>
+                        </form>
+                    </div>
+                    <h3 class="text-white m-3" style="text-align: center;">Generar facturas</h3>
+                    <div style="width: 100%;">
+                        <a href="/historial/ver" class="btn btn-success d-flex align-items-center justify-content-center" style="height: 40px; background-color: #ffc107; color: black; border-color: #ffc107;" type="button">Facturar</a>
+                    </div>
+            </div>
+        
+        
+    </div>
+
+
+    <div class="casilla_2" style="flex: 1; width: 70%; align-items: start; justify-content: center; display: grid; margin-top: 50px;">
+        <h3 class="text-white m-3" style="text-align: center;">Resultado de ordenamiento</h3>
+        <table id="tabla" class="table text-white">
+            <thead>
+                <th>Factura Nro</th>
+                <th>Usuario</th>
+                <th>Fecha</th>
+                <th>Monto</th>
+                <th>Tipo RUC</th>
+                <th>RUC</th>
+                <th>Acciones</th>
+            </thead>
+            <tbody>
+                {% for item in lista %}
+                <tr>
+                    <td>{{ item._id }}</td>
+                    <td>{{ item._usuario }}</td>
+                    <td>{{ item._fecha }}</td>
+                    <td>{{ item._monto }}</td>
+                    <td>{{ item._tipoRUC }}</td>
+                    <td>{{ item._RUC }}</td>
+                    <td><a href="/facturas/editar/{{ item.id }}" class="btn btn-info" style="background-color: #ffc107; border: #ffc107;">MODIFICAR</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,91 @@
+{% extends "template.html"%}
+{% block content%}
+
+
+<div style="display: flex; margin-left: 1%;" class="contenedor">
+        <div class="casilla_2" style="flex: 1; max-width: 25%; align-items: start; justify-content:center; align-items: center; display: grid; margin-bottom: 20px; contain: content;">
+            <div class="row" style="background-color: rgb(51, 44, 44); margin-top: 40px;  border-radius: 15px; padding: 5px; height: 300px; width: 100%; contain: content;">
+
+                        <form method="post" action="/historial/buscar" style="justify-content: center;">
+                            <div class="">
+                                <h3 class="text-white m-3" style="text-align: center; border-bottom: 10px; width: 100%;">Parámetros de búsqueda</h3>
+                                <div class="row" style="justify-content: center;">
+                                    
+                                    <div class="" style="margin-bottom: 20px;">
+                                        <select id="select-campo" name="select-campo" class="form-select" aria-label="Opciones de ordenamiento">
+                                            <option value="_RUC">RUC</option>
+                                            <option value="_usuario">Nombre de usuario</option>
+                                            <option value="_tipoRUC">Tipo Ruc</option>
+                                            <option value="_fecha">Fecha de factura</option>
+                                            <option value="_monto">Total</option>
+                                        </select>
+                                    </div>
+                                    <div class="" style="margin-bottom: 20px;">
+                                        <input id="input-campo" name="input-campo" type="text" class="form-control" placeholder="Parámetro" required>
+                                    </div>
+                                </div>
+                                <button class="btn btn-warning" type="submit">BUSCAR</button>
+                            </div>
+                        </form>
+
+                    
+        
+            </div>
+        </div>
+            
+        <div class="casilla_2" style="flex: 1; width: 75%; align-items: start; justify-content: center;margin-top: 50px;">
+            <h3 class="text-white m-3" style="text-align: center;">Resultados de la búsqueda</h3>
+            <h6 class="" style="color: #ffc107;">{{ mensaje }}</h6>
+            <table id="tabla" class="table text-white">
+                <thead>
+                    <th>Factura Nro</th>
+                    <th>Usuario</th>
+                    <th>Fecha</th>
+                    <th>Monto</th>
+                    <th>Tipo RUC</th>
+                    <th>RUC</th>
+                </thead>
+                <tbody>
+                    {% for factura in facturas %}
+                    <tr>
+                        <td>{{ factura._id }}</td>
+                        <td>{{ factura._usuario }}</td>
+                        <td>{{ factura._fecha }}</td>
+                        <td>{{ factura._monto }}</td>
+                        <td>{{ factura._tipoRUC }}</td>
+                        <td>{{ factura._RUC }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+</div>
+
+<script>
+    document.getElementById('select-campo').addEventListener('change', function() {
+        var inputCampo = document.getElementById('input-campo');
+        switch (this.value) {
+            case '_usuario':
+                inputCampo.type = 'text';
+                inputCampo.placeholder = 'nombre apellido';
+                break;
+            case '_fecha':
+                inputCampo.type = 'date';
+                inputCampo.placeholder = 'dd/mm/aaaa';
+                break;
+            case '_monto':
+                inputCampo.type = 'number';
+                inputCampo.placeholder = '0.00';
+                break;
+            case '_RUC':
+                inputCampo.type = 'text';
+                inputCampo.placeholder = 'XXXXXXXXXXXXXX';
+                break;
+            case '_tipoRUC':
+                inputCampo.type = 'text';
+                inputCampo.placeholder = 'EDUCATIVO/PROFESIONAL';
+                break;
+        }
+    });
+    </script> 
+{% endblock %}
