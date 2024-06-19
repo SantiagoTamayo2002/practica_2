@@ -9,30 +9,36 @@ import time
 
 listaNumber = Linked_List()
 listaString = Linked_List()
-try:
-    fact = FacturaDaoControl()
-    ret = RetencionDaoControl()
-    for i in range(10000):
-        listaNumber.add(random.randint(0,100000))
-    #
-    inicio = time.time()
-    listaNumber.sort(1,0)
-    fin = time.time()
-    print("Tiempo de ejecucion: ", fin-inicio)
 
-    listaString.add("Juan Perez")
-    listaString.add("William Chamba")
-    listaString.add("Andres Pardo")
-    listaString.add("Rafael Chuquihuanca")
-    listaString.add("David Jimenez")
-    listaString.add("Carlos Andrade")
-    listaString.add("Brandon Gutierrez")
-    listaString.add("Estefania Cale")
-    listaString.add("Ximena Yanayaco")
-    listaString.add("Ximena Yanayaco")
+list10000numbres = []
+for i in range(0,10000):
+    list10000numbres.append(randint(0,10000))
     
-    listaAuxx = listaString.binary_search_secuencial("Ximena Yanayaco", 1)
-    listaString.sort(1)
-    listaAux = fact._list().sort_models('_monto', 1, 0) 
-except Exception as e:
-    print(f"Error: {e}")
+    inicio = time()
+    listquick = quicksort.sort(list10000numbres)
+    print("---------------------------------------------")
+    print("QuickSort with 10000 numbers: ", time()-inicio)
+    inicio = time()
+    listshell = shell.sort_descendent(list10000numbres)
+    print("ShellSort with 10000 numbers: ", time()-inicio)
+    inicio = time() 
+    listamerge = merge.sort_descendent(list10000numbres)
+    print("MergeSort with 10000 numbers: ", time()-inicio)
+    
+    list20000numbres = []
+    for i in range(0,20000):
+        list20000numbres.append(randint(0,20000))
+
+    inicio = time()
+    listquick = quick.sort_acendent(list20000numbres)
+    print("---------------------------------------------")
+    print("QuickSort with 20000 numbers: ", time()-inicio)
+    inicio = time()
+    listshell = shell.sort_descendent(list20000numbres)
+    print("ShellSort with 20000 numbers: ", time()-inicio)
+    inicio = time() 
+    listamerge = merge.sort_descendent(list20000numbres)
+    print("MergeSort with 20000 numbers: ", time()-inicio)
+
+    
+ 

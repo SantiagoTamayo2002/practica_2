@@ -1,4 +1,6 @@
 class MergeSort:
+
+
     def sort_primitive_ascendent(self, nums):
         buffer = [0] * len(nums)
         self.merge_sort(nums, 0, len(nums) - 1, buffer)

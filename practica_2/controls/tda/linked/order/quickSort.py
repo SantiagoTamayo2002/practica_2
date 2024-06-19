@@ -1,5 +1,8 @@
 import random
 class QuickSort:
+
+# método de ordenación ascendente.
+#////////////////////////////////////////////////////////////////////////////////////////////////////////
     def sort_primitive_ascendent(self, array):
         if len(array) <= 1:
             return array
@@ -9,8 +12,8 @@ class QuickSort:
             equal = [i for i in array if i == pivot]
             greater = [i for i in array if i > pivot]
             return self.sort_primitive_ascendent(less) + equal + self.sort_primitive_ascendent(greater)
-
-    def sort_primitive_descendent(self, array):
+#/////////////////////////////////////////////////////////////////////////////////////////////////////    
+    def sort_primitive_descendent(self, array): # <- de manera descendente
         if len(array) <= 1:
             return array
         else:

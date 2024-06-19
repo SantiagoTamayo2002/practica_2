@@ -242,8 +242,8 @@ class Linked_List(object):
             self.__addLast__(array[i])
 
 
-    def sort(self, type, typeSort = 1):
-        if self.isEmpty:
+    def sort(self, type, typeSort = 1): #<- typesort es uno si le mando uno desde la vista en el select
+        if self.isEmpty:                # llegá aqui y ordena por este método.
             raise LinkedEmptyException("List empty")
         else:
             array = self.toArray
@@ -304,7 +304,7 @@ class Linked_List(object):
             if type == 0:
                 return search.binary_string(array, data, 0, len(array) - 1)
             elif type == 1:
-                return search.binary_primitive(array, data, 0, len(array) - 1)  
+                return search.binary_int(array, data, 0, len(array) - 1)  
             
             
     def binary_search_secuencial(self, data, type = 1):
